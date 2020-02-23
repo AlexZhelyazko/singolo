@@ -128,8 +128,9 @@ section {
   /************************************************************/
 
   article{
-    height: 496px;
+    height: 492px;
     background-color: #f2f2f2;
+    border-bottom: solid 6px #ffffff;
 }
 
 .service h1{
