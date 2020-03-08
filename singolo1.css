@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
-
+@font-face{
+  src: url('assets/font/Lato-Black.ttf');
+  font-family: Lato-Black;
+}
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@ body{
     background-color: #2d303a;
     color: #ffffff;
     font-weight: 700;
-    font-family: Lato;
+    font-family: "Lato";
     height: 89px;
     text-transform: uppercase;
     border-bottom: solid 6px #323746;
@@ -133,157 +135,89 @@ section {
     border-bottom: solid 6px #ffffff;
 }
 
-.service h1{
-  padding-top: 55px;
+.service>h1{
+  padding-top: 58px;
     width: 232px;
     height: 23px;
     color: #666d89;
-    font-family: 'Lato-black';
-    font-size: 34px;
+    font-family: "Lato-Black";
+    font-size: 30px;
     word-spacing: -2px;
     font-weight: 700;
 }
 
 .service>p{
+  letter-spacing: -0.09px;
   word-spacing: -1px;
   text-align: justify;
-  padding-top: 35px;
+  padding-top: 33px;
   color: #767e9e;
-  font-family: Lato;
+  font-family: "Lato";
   font-size: 18px;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 29px;
 }
 
-.service1{
-  margin-top: 45px;
-}
-
-.service1>div:nth-child(1){
-    float: left;
-    width: 56px;
-    border-radius: 36px;
-    border: 2px solid #666d89;    
-    height: 56px;
-}
-
-.service1 img{
-  padding:12px
-}
-
-.service1>div:nth-child(2){
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.service1>div:nth-child(2) h3{
-  width: 160px;
-  height: 17px;
-  color: #666d89;
-  font-family: "Lato - Black";
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 17.86px;
-}
-
-.service1>div:nth-child(2) p{
-  text-align: justify;
-  padding-top: 11px;
-  width: 220px;
-  height: 54px;
-  color: #767e9e;
-  font-family: Lato;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 21.56px;
-}
-
-.container2{
-  margin-top: -2px;
+.row{
+  margin-top: 46px;
   display: flex;
   flex-direction: row;
 }
 
-.container2>div:nth-child(2), .container2>div:nth-child(3){
-  margin-left: 20px;
-}article{
-    height: 496px;
-    background-color: #f2f2f2;
+.service-column{
+  margin-right: 19px;
+  display: flex;
+  flex-direction: column;
 }
 
-.service h1{
-  padding-top: 55px;
-    width: 232px;
-    height: 23px;
+.service-column>div{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.service-column h3{
+  margin-top: -4px;
     color: #666d89;
-    font-family: 'Lato-black';
-    font-size: 34px;
-    word-spacing: -2px;
-    font-weight: 700;
+    font-family: "Lato-Black";
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.service>p{
-  word-spacing: -1px;
+.service-column p{
+  height: 63px;
+  overflow: hidden;
+    text-overflow: ellipsis;
+  left: 1px;
   text-align: justify;
-  padding-top: 35px;
-  color: #767e9e;
-  font-family: Lato;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30px;
-}
-
-.service1{
-  margin-top: 45px;
-}
-
-.service1>div:nth-child(1){
-    float: left;
-    width: 56px;
-    border-radius: 36px;
-    border: 2px solid #666d89;    
-    height: 56px;
-}
-
-.service1 img{
-  padding:12px
-}
-
-.service1>div:nth-child(2){
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.service1>div:nth-child(2) h3{
-  width: 160px;
-  height: 17px;
-  color: #666d89;
-  font-family: "Lato - Black";
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 17.86px;
-}
-
-.service1>div:nth-child(2) p{
-  text-align: justify;
-  padding-top: 11px;
+  position: relative;
+  top: 10px;
   width: 220px;
-  height: 54px;
   color: #767e9e;
   font-family: Lato;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 21.6px;
 }
 
-.container2{
-  margin-top: -2px;
-  display: flex;
-  flex-direction: row;
+.service-column>div>div:first-child{
+  margin-right: 20px;
+  border-radius: 50px;
+  text-align: center;
+  height: 55px;
+  width: 55px;
+  border: 2px solid #666d89;
 }
 
-.container2>div:nth-child(2), .container2>div:nth-child(3){
-  margin-left: 20px;
+.service-column>div:first-child{
+  margin-bottom: 43px;
+}
+
+.row>.service-column:first-child>div>div:first-child>img{
+  position: relative;
+  top:12px;
+}
+
+.row>.service-column:nth-child(3){
+  margin-left: 3px;
 }
