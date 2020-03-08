@@ -9,6 +9,7 @@
 }
 
 body{
+  margin: 0 auto;
     width: 1020px;
 }
 
@@ -147,6 +148,9 @@ section {
 }
 
 .service>p{
+  height: 58px;
+  overflow: hidden;
+    text-overflow: ellipsis;
   letter-spacing: -0.09px;
   word-spacing: -1px;
   text-align: justify;
