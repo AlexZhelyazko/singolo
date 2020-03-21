@@ -9,33 +9,53 @@
   }
   
   body{
+    overflow-x: hidden;
       margin: 0 auto;
       width: 1020px;
   }
-  
-    header{
-      background-color: #2d303a;
-      color: #ffffff;
-      font-weight: 700;
-      font-family: "Lato";
-      height: 89px;
-      text-transform: uppercase;
-      border-bottom: solid 6px #323746;
+  a{
+    text-decoration: none;
+    color: white;
   }
   
+    header{
+      position: fixed;
+    background-color: #2d303a;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Lato";
+    height: 93px;
+    text-transform: uppercase;
+    border-bottom: solid 6px #323746;
+    z-index: 10;
+    width: 1020px;
+  }
+  
+.active-header{
+  color: #f06c64;
+}
+
   .container {
       width: 100%;
       max-width: 940px;
       margin: 0 auto;
       padding: 0 40px;
     }
+
+    .container_slider{
+      width: 1020px;
+      height: 594px;
+      position: relative;
+    }
   
   .head{
-      justify-content: space-between;
-      align-content: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+    width: 941px;
+    justify-content: space-between;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 4px;
   }
   
   .head>div:first-child{
@@ -56,7 +76,7 @@
     content: "*";
   }
   
-  .head>div:first-child:hover, .head>div:nth-child(2) nav li:hover{
+  .head>div:first-child:hover, .head>div:nth-child(2) nav li a:hover{
       cursor: pointer;
       color: #f06c64;
   }
@@ -88,45 +108,106 @@
   /*************************************************************/
   
   section {
+    overflow: hidden;
     height: 595px;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+    position: relative;
     }
-    
-    .slider {
-      position: relative;
-    }
-    
-    .slider>div:first-child {
+
+    .first_page{
+      width: 100%;
+      height: 594px;
+      position: absolute;
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
-    
-    .slider>div:first-child>div:first-child {
-      padding: 53px 0 0 72px;
-    }
-    
-    .slider>div:first-child>div:nth-child(2) {
-      padding: 174px 0 0 73px;
-    }
-    
-    .slider>div:nth-child(2) {
+
+     .Phone1{
+      height: 482px;
+    position: relative;
+    top: 53px;
+    left: 39px;
+     }
+
+     .Phone2{
+      position: relative;
+    top: -2px;
+    right: 37px;
+    height: 239px;
+    align-self: center;
+     }
+
+     .prev_chev{
       position: absolute;
-      top: 52%;
-      left: 2px;
-      cursor: pointer;
-    }
-    
-    .slider>div:nth-child(3) {
+      bottom: 286px;
+      left: 42px;
+     }
+
+     .next_chev{
       position: absolute;
-      top: 52%;
-      right: 0;
-      cursor: pointer;
-    }
-  
-  
-    .slider>div:nth-child(2):hover, .slider>div:nth-child(3):hover{
-      cursor: pointer;
-      opacity: 0.5;
+      left: 965px;
+      bottom: 286px;
+     }
+
+     .prev_chev:hover{
+       cursor: pointer;
+     }
+
+     .next_chev:hover{
+       cursor: pointer;
+     }
+
+     .second_page{
+       width: 100%;
+       height: 594px;
+       position: absolute;
+     }
+
+    .page.active{ 
+       transform: translate(0,0);
+     }
+
+     .page{
+       transition-duration: 1s;
+       transform: translate(-100%,0);
+     }
+
+     .page.active ~ .page{
+       transform: translate(100%,0);
+     }
+
+     .slider{
+      width: 1020px;
+      height: 594px;
+      position: absolute;
+     }
+
+     .black_phone{
+       opacity: 0;
+       z-index: 2;
+      top: 117px;
+      position: absolute;
+      height: 334px;
+      width: 188px;
+      display: block;
+      background-color: black;
+      left: 127px;
+      
+     }
+     .black_phone2{
+      opacity: 0;
+    z-index: 2;
+    top: 188px;
+    position: absolute;
+    height: 190px;
+    width: 336px;
+    display: block;
+    background-color: black;
+    left: 484px;
+    border-radius: 3px;
+     
     }
     /************************************************************/
   
@@ -309,6 +390,15 @@
     padding-top: 3px;
   }
 
+  .act{
+    color: #f2f2f2;
+    box-shadow: 0 0 3px 1px lightgray;
+  }
+
+  .active_img {
+    border: solid 5px #F06C64;
+  }
+
   .portfolio-descr > div:last-child div:hover{
     color: #dedede;
     border-color: #dedede;
@@ -318,9 +408,11 @@
   .gallery{
     height: 600px;
     overflow: hidden;
-      padding-top: 18px;
-      display: flex;
-      flex-direction: column;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .gallery > div{
@@ -509,8 +601,7 @@ font-weight: 400;
     background-color: #d6564f;
   }
 
-
-
+ 
   .forms div{
     padding-bottom: 16px;
   }
@@ -528,6 +619,18 @@ font-weight: 400;
     cursor: pointer;
     transition: top 1s ease-out 0.4s;
     background-color: #f0d8d9;
+  }
+
+  #hidden_message{
+    display: none;
+    color: white;
+    position: absolute;
+    width: 30em;
+    height: 10em;
+    text-align: center;
+    border-radius: 30px;
+    opacity: 0.9;
+    background-color: #d1bfbf;
   }
 
   .contact{
