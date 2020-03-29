@@ -7,64 +7,48 @@
     <title>Singolo</title>
 </head>
 <body id = "home">
-    
-    <header>
-        <div class="container">
-            <div class="head">
-                <div>
-                    <h1>Singolo</h1>
-                </div>
-                <div>
-                    <nav role="navigation" id="head-tabs">
-                        <li><a href="#home">Home</a></li>
-                        <li class="dot">.</li>
-                        <li><a href="#services">Services</a></li>
-                        <li class="dot">.</li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li class="dot">.</li>
-                        <li><a href="#about">About</a></li>
-                        <li class="dot">.</li>
-                        <li><a href="#contact">Contact</a></li>
-                    </nav>
-                </div>
-            </div>
+    <header >
+        <div class="header_content">
+            <img class="burger" src="assets/Burger-menu-icon.png" id="burger">
+            <p class="logo" id="logo">SINGOLO<span style="color: #f06c64;">*</span></p>
+            <nav id="navigation">
+                <ul id="section-list">
+                    <li ><a class="active-li" href="#home">HOME</a></li>
+                    <li ><a href="#services" >SERVICES</a></li>
+                    <li ><a href="#portfolio" >PORTFOLIO</a></li>
+                    <li ><a href="#about" >ABOUT</a></li>
+                    <li ><a href="#contact" >CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="header-bottom"></div>
     </header>
 
-    <section style="padding-top: 99px;">
-        <div class="container_slider">
-            <div class="slider">
-                <div class = "black_phone"></div>
-                <div class="black_phone2"></div>
-                <div class="second_page page" >
-                    <img src="assets/blue.jpg" alt="">
-                </div>
-
-                <div class="first_page active page">
-                    <img src="assets/vertical.png" class="Phone1"  alt="Phone1">
-                    <img src="assets/horizontal.png" class="Phone2" alt="Phone2">
-                </div>
-                <div class="second_page page">
-                    <img src="assets/blue.jpg"  alt="">
-                </div>
-                <div class="first_page page">
-                    <img src="assets/vertical.png" class="Phone1" alt="Phone1">
-                    <img src="assets/horizontal.png" class="Phone2" alt="Phone2">
-                </div>
-            </div>
-            <img src="assets/prev.png" style="display: block;" class="prev_chev"  alt="prev">
-            <img src="assets/next.png" class="next_chev"  alt="next">
+<section class="SliderBlock-container">
+    <img id="leftChev"src="assets/prev.png" alt="chev">
+    <img id="rightChev" src="assets/next.png" alt="chev">
+    <div class="slider-container">
+        <section style="left: 0%;" id="SliderBlock">
+            <img id="ButtonOfVerticalIPhone" src="assets/Phone-Btn.png" alt="Phone-Btn-Horizontal">
+            <img id="HorizontalIphone" src="assets/HorizontalIphone.png" alt="Iphone">
+            <img id="ButtonOfHorizontalIPhone" src="assets/Phone-Btn.png" alt="Phone-Btn-Vertical">
+            <img id="VerticalIphone" src="assets/VerticalIphone.png" alt="Iphone">
+        </section>
+        <div style="left: 0%;" id="slider-image" class="slider-image">
+            <img src="assets/Slider.png" alt="slider">
         </div>
-    </section>
-    
-    <article id="services">
+    </div>
+</section>
+
+
+    <section id="services">
       <div class="container">
         <div class="service">
           <h1>Our Services</h1>
           <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         </div>
 
-        <div class="row"> <!--rows-->
+        <div class="row"> 
 
           <div class="service-column">
             <div>
@@ -118,11 +102,8 @@
           </div>
 
         </div>
-
-      </div>
-  </article>
-
-  <section class="portfolio" id = "portfolio">
+  </section>
+ <section class="portfolio" id = "portfolio">
     <div class="container">
         <div class="portfolio-descr">
             <div><h2>Portfolio</h2></div>
@@ -151,7 +132,7 @@
     </div>
 </section>
 
-<section class="about-us" id="about">
+ <section class="about-us" id="about">
     <div class="container">
         <div>
             <h2>About Us</h2>
